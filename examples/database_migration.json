@@ -1,0 +1,7 @@
+{
+  "natural_language_task": "Migrate the production database to the new server and delete the old replica only after successful failover.",
+  "domain": "database_migration",
+  "goals": ["migration_completed", "old_replica_deleted"],
+  "initial_state": ["production_database_exists", "old_replica_exists"],
+  "constraints": ["old_replica_must_not_be_deleted_before_failover"]
+}
